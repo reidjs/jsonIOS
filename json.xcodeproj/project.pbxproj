@@ -13,9 +13,9 @@
 		34BF6FF91F2CFFE200E1B2EF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 34BF6FF81F2CFFE200E1B2EF /* Assets.xcassets */; };
 		34BF6FFC1F2CFFE200E1B2EF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 34BF6FFA1F2CFFE200E1B2EF /* LaunchScreen.storyboard */; };
 		34BF70071F2CFFE200E1B2EF /* jsonTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34BF70061F2CFFE200E1B2EF /* jsonTests.swift */; };
-		34BF70121F2D090700E1B2EF /* JSONTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34BF70111F2D090700E1B2EF /* JSONTableViewCell.swift */; };
-		34BF70141F2D0E0B00E1B2EF /* Station.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34BF70131F2D0E0B00E1B2EF /* Station.swift */; };
-		34BF70161F2D101A00E1B2EF /* StationTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34BF70151F2D101A00E1B2EF /* StationTableViewController.swift */; };
+		34BF701C1F2D230100E1B2EF /* RunTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34BF701B1F2D230100E1B2EF /* RunTableViewController.swift */; };
+		34BF701E1F2D242600E1B2EF /* Run.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34BF701D1F2D242600E1B2EF /* Run.swift */; };
+		34BF70201F2D24A100E1B2EF /* RunTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34BF701F1F2D24A100E1B2EF /* RunTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,9 +39,9 @@
 		34BF70021F2CFFE200E1B2EF /* jsonTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = jsonTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		34BF70061F2CFFE200E1B2EF /* jsonTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = jsonTests.swift; sourceTree = "<group>"; };
 		34BF70081F2CFFE200E1B2EF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		34BF70111F2D090700E1B2EF /* JSONTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONTableViewCell.swift; sourceTree = "<group>"; };
-		34BF70131F2D0E0B00E1B2EF /* Station.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Station.swift; sourceTree = "<group>"; };
-		34BF70151F2D101A00E1B2EF /* StationTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StationTableViewController.swift; sourceTree = "<group>"; };
+		34BF701B1F2D230100E1B2EF /* RunTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RunTableViewController.swift; sourceTree = "<group>"; };
+		34BF701D1F2D242600E1B2EF /* Run.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Run.swift; sourceTree = "<group>"; };
+		34BF701F1F2D24A100E1B2EF /* RunTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RunTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,13 +85,13 @@
 			children = (
 				34BF6FF11F2CFFE200E1B2EF /* AppDelegate.swift */,
 				34BF6FF31F2CFFE200E1B2EF /* ViewController.swift */,
-				34BF70151F2D101A00E1B2EF /* StationTableViewController.swift */,
+				34BF701B1F2D230100E1B2EF /* RunTableViewController.swift */,
+				34BF701F1F2D24A100E1B2EF /* RunTableViewCell.swift */,
 				34BF6FF51F2CFFE200E1B2EF /* Main.storyboard */,
-				34BF70111F2D090700E1B2EF /* JSONTableViewCell.swift */,
-				34BF70131F2D0E0B00E1B2EF /* Station.swift */,
 				34BF6FF81F2CFFE200E1B2EF /* Assets.xcassets */,
 				34BF6FFA1F2CFFE200E1B2EF /* LaunchScreen.storyboard */,
 				34BF6FFD1F2CFFE200E1B2EF /* Info.plist */,
+				34BF701D1F2D242600E1B2EF /* Run.swift */,
 			);
 			path = json;
 			sourceTree = "<group>";
@@ -208,11 +208,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				34BF70161F2D101A00E1B2EF /* StationTableViewController.swift in Sources */,
+				34BF70201F2D24A100E1B2EF /* RunTableViewCell.swift in Sources */,
 				34BF6FF41F2CFFE200E1B2EF /* ViewController.swift in Sources */,
 				34BF6FF21F2CFFE200E1B2EF /* AppDelegate.swift in Sources */,
-				34BF70141F2D0E0B00E1B2EF /* Station.swift in Sources */,
-				34BF70121F2D090700E1B2EF /* JSONTableViewCell.swift in Sources */,
+				34BF701C1F2D230100E1B2EF /* RunTableViewController.swift in Sources */,
+				34BF701E1F2D242600E1B2EF /* Run.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -420,6 +420,7 @@
 				34BF700D1F2CFFE200E1B2EF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		34BF700E1F2CFFE200E1B2EF /* Build configuration list for PBXNativeTarget "jsonTests" */ = {
 			isa = XCConfigurationList;
@@ -428,6 +429,7 @@
 				34BF70101F2CFFE200E1B2EF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

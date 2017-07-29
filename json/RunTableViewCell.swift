@@ -1,5 +1,5 @@
 //
-//  JSONTableViewCell.swift
+//  RunTableViewCell.swift
 //  json
 //
 //  Created by Reid Sherman MAT on 7/29/17.
@@ -8,11 +8,15 @@
 
 import UIKit
 
-class JSONTableViewCell: UITableViewCell {
-    //MARK:Properties 
+class RunTableViewCell: UITableViewCell {
+    //MARK: Properties
     
+    
+    @IBOutlet weak var timeLabel: UILabel!
+    @IBOutlet weak var locationLabel: UILabel!
     @IBOutlet weak var nameLabel: UILabel!
-    @IBOutlet weak var dateLabel: UILabel!
+    @IBOutlet weak var dayLabel: UILabel!
+ 
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
