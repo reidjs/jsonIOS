@@ -13,25 +13,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        let url = URL(string: "http://www.learnswiftonline.com/Samples/subway.json")
-        URLSession.shared.dataTask(with:url!, completionHandler: {(data, response, error) in
-            guard let data = data, error == nil else { return }
-            
-            do {
-                let json = try JSONSerialization.jsonObject(with: data, options: .allowFragments) as! [String:Any]
-                if let stations = json["stations"] as? [[String: AnyObject]] {
-                    for station in stations {
-                        if let name = station["stationName"] as? String {
-                            if let year = station["buildYear"] as? String {
-                                print(name,year)
-                            }
-                        }
-                    }
-                }
-            } catch let error as NSError {
-                print(error)
-            }
-        }).resume()
+        
     }
 
     override func didReceiveMemoryWarning() {
