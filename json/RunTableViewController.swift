@@ -17,7 +17,7 @@ class RunTableViewController: UITableViewController {
         super.viewDidLoad()
         
         var x: [Run]
-        x = [Run(name:"a", day:"b", time:"c", location:"d")!]
+        x = [Run(name:"name", day:"day", time:"time", location:"loc")!]
         all_runs += x
         //print("R:", runs)
         loadSampleRuns()
@@ -45,16 +45,15 @@ class RunTableViewController: UITableViewController {
         return all_runs.count
     }
     
-    //Not reaching here!
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        print("HERE")
+        //print("HERE")
         // Table view cells are reused and should be dequeued using a cell identifier.
         let cellIdentifier = "RunTableViewCell"
-        print("HERE2")
+        //print("HERE2")
         guard let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as? RunTableViewCell  else {
             fatalError("The dequeued cell is not an instance of RunTableViewCell.")
         }
-        print("HERE3")
+        //print("HERE3")
         // Fetches the appropriate meal for the data source layout.
         
         let run = all_runs[indexPath.row]
@@ -62,7 +61,7 @@ class RunTableViewController: UITableViewController {
         cell.dayLabel.text = run.day
         cell.timeLabel.text = run.time
         cell.locationLabel.text = run.location
-        print(run.name)
+        //print(run.name)
         return cell
     }
     
@@ -115,35 +114,35 @@ class RunTableViewController: UITableViewController {
     
      private func loadSampleRuns(){
         let url = URL(string: "http://reidsherman.com/runs.json")
-        URLSession.shared.dataTask(with:url!, completionHandler: {(data, response, error) in
-            guard let data = data, error == nil else { return }
-            do {
-                print("here2")
-                let json = try JSONSerialization.jsonObject(with: data, options: .allowFragments) as! [String:Any]
-                if let runs_load = json["runs"] as? [[String: AnyObject]] {
-                    for run in runs_load {
-                        print("here3")
-                        if let r_name = run["runName"] as? String {
-                            if let r_day = run["runDay"] as? String {
-                                if let r_time = run["runTime"] as? String {
-                                    if let r_location = run["runLocation"] as? String {
-                                        guard let current_run = Run(name:r_name, day: r_day, time: r_time, location: r_location) else {
-                                            fatalError("Unable to instantiate run")
-                                        }
+        URLSession.shared.dataTask(with:url!, completionHandler:
+            {(data, response, error) in
+                guard let data = data, error == nil else { return }
+                do {
+                    //print("here2")
+                    let json = try JSONSerialization.jsonObject(with: data, options: .allowFragments) as! [String:Any]
+                    if let runs_load = json["runs"] as? [[String: AnyObject]] {
+                        for run in runs_load {
+                            //print("here3")
+                            if let r_name = run["runName"] as? String {
+                                if let r_day = run["runDay"] as? String {
+                                    if let r_time = run["runTime"] as? String {
+                                        if let r_location = run["runLocation"] as? String {
+                                            guard let current_run = Run(name:r_name, day: r_day, time: r_time, location: r_location) else {
+                                                fatalError("Unable to instantiate run")
+                                            }
                                         
-                                        self.all_runs += [current_run]
-                                        //print(priv_runs)
+                                            self.all_runs += [current_run]
+                                            print(self.all_runs)
+                                            self.tableView.reloadData()
+                                        }
                                     }
                                 }
                             }
                         }
                     }
-                }
-            } catch let error as NSError {
+                } catch let error as NSError {
                 print(error)
-            }
-            
-            
+                }
         }).resume()
         //print("a: ", priv_runs)
         //runs = priv_runs
